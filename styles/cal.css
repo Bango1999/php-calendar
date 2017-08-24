@@ -1,0 +1,273 @@
+body {
+	margin:0;
+	padding:0;
+	background:url(http://subtlepatterns.com/patterns/graphy.png);
+}
+#calTable {  width: 100%; padding-left:35px; padding-right:35px; }
+table.calendar		{ border-left:1px solid #999; }
+tr.calendar-row	{ color:black; }
+td.calendar-day	{ vertical-align:top; font-size:11px; position:relative;  height:121px;}
+td.calendar-day:hover	{ background:rgba(170,140,140,0.5); }
+td.calendar-day-np	{ min-height:80px; } * html div.calendar-day-np { height:80px; }
+td.calendar-day-head { font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #999; border-top:1px solid #999; border-right:1px solid #999; }
+div.day-number		{ background:#CF0000; padding:5px; color:#fff; font-weight:bold; float:right; text-decoration:none;border-bottom-left-radius:7px; -webkit-border-bottom-left-radius:7px; -moz-border-bottom-left-radius:7px; width:20px; text-align:center; }
+div.day-number:hover { box-shadow: 2px 2px 2px black; background:#cc0000; text-decoration:underline; }
+td.calendar-day, td.calendar-day-np { width:14.25%; height:121px; padding:5px; border-bottom:1px solid #999; border-right:1px solid #999; }
+.calEventsDiv { height:100%; background: rgba(200,180,180,0.8)}
+.control 			{ font:12px tahoma, arial, helvetica, 
+sans-serif; padding:5px; border:1px solid #ccc; background:#eee; }
+
+.calFormInterface { display:inline-block; margin:0 auto;text-align:center }
+
+#calendarFooter { background:url(http://subtlepatterns.com/patterns/graphy.png) }
+
+#header-wrap {
+	/*position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;*/	
+}
+
+#header-container {
+	/*height: 200px;
+	background-color: #FFF;*/
+}
+
+#header {
+	/*width: 100%;
+	margin: 0 auto;
+	position: relative;*/
+}
+
+#container {
+	/*width: 100%;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 200px 0 40px;*/
+}
+
+#content {
+	/*float: left;
+	width: 100%;*/
+}
+
+#letterpress {
+	text-align:left;
+	margin-left:10%;
+}
+#letterpress h1 {
+	font-size:60px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(65,65,75,0.8);
+	text-shadow: 1px 4px 6px #ccc, 0 0 0 #000, 1px 4px 6px rgba(255,255,255,0.3)
+}
+
+ #slideout {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  z-index:999;
+}
+#slideout_inner {
+z-index:999;
+  position: fixed;
+  top: 40%;
+  left: -500px;
+  width:500px;
+  min-height:122px;
+  max-height:60%;
+  overflow:auto;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+   background: #414141;
+}
+
+.AddEventInputField {
+display: block;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.AddEventInputField label,
+.fieldlabel {
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+	padding-left:10px;
+}
+
+.borderbottom {
+	padding-bottom:10px;
+}
+
+.calendarCellEvent {
+	transition-property:margin-right;
+	-moz-transition-property: margin-right; /* Firefox 4 */
+	-webkit-transition-property:margin-right; /* Safari and Chrome */
+	-o-transition-property:margin-right; /* Opera */
+	transition-duration: 0.5s;
+	margin:0;
+	margin-bottom:1px;
+	border-bottom:1px solid #000; 
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	background: rgba(242,242,242,0.5);
+}
+
+.calendarCellEvent:hover {
+	margin-right:25%;
+}
+
+.modifyBtn span {
+display: block;
+height: 40px;
+padding-top: 3px;
+text-align:center;
+color:#cf0000;
+}
+.modifyBtn:hover,
+.deleteBtn:hover {
+	background:#414141;
+	color:#fff;
+	border: 1px solid #fff;
+	
+}
+
+.modifyBtn {
+color: #cf0000;
+background: #ccc;
+border: 1px solid #cf0000;
+width: 100px;
+border-radius: 10px;
+height: 25px;
+text-align: center;
+display: inline-block;
+float: right;
+clear: right;
+margin-right: 10px;
+margin-top:20px;
+position: relative;
+right: 10px;
+}
+
+.deleteBtn {
+}
+
+.sidebarFieldset {
+	width:90%;
+	margin: 0 auto;
+}
+
+.scroll {
+	min-height:122px;
+	max-height:500px;
+	overflow:auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.scroll::-webkit-scrollbar-track {
+	background:#555555;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.scroll::-webkit-scrollbar-thumb {
+	background:#cf0000;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+#controlContainer {
+	padding-left:35px;
+	padding-right:35px;;
+}
+
+#controlBar {
+	width:100%;
+	vertical-align:top;
+	display:block;;
+	background: #414141;
+}
+
+.eventListItem {
+background: #666666;
+margin: 5px;
+border: 1px solid #cf0000;
+}
+
+#groupsDiv {
+	max-width:918px;
+	background:blue;
+}
+
+#showAddTrigger {
+width: 150px;
+height: 25px;
+text-align: center;
+border-radius: 10px;
+padding-top: 4px;
+margin-top: 10px;
+margin-bottom: 5px;
+border: 1px solid #cf0000;
+background: #ccc;
+color: #cf0000;
+}
+
+#showAddTrigger:hover {
+	background:#414141;
+	color:#cf0000;
+	border: 1px solid #fff;
+}
+
+.tempsFlag {
+	background:rgba(207,0,0,0.7);
+	color:white;
+	text-align:center;
+	font-weight:bold;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+}
+.tempsFlag:hover {
+	box-shadow: 1px 1px 2px black;
+	-webkit-box-shadow: 1px 1px 2px black;
+	-moz-box-shadow: 1px 1px 2px black;
+}
+
+.deleteBtn {
+color: #414141;
+background: rgba(207,0,0,0.6);
+border: 1px solid white;
+width: 100px;
+border-radius: 10px;
+height: 25px;
+text-align: center;
+display: inline-block;
+float: right;
+clear: right;
+margin-right: 10px;
+margin-top:20px;
+position: relative;
+right: 10px;
+}
+
+.deleteBtn span {
+display: block;
+height: 40px;
+padding-top: 3px;
+text-align: center;
+color: white;
+}
+
+.deleteBtn span:hover {
+	color:#cf0000;
+}
